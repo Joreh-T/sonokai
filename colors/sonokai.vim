@@ -92,13 +92,13 @@ else
 endif
 call sonokai#highlight('DiffAdd', s:palette.none, s:palette.diff_green)
 call sonokai#highlight('DiffChange', s:palette.none, s:palette.diff_blue)
-call sonokai#highlight('DiffDelete', s:palette.none, s:palette.diff_red)
+call sonokai#highlight('DiffDelete', s:palette.bg0, s:palette.diff_red)
 if has('nvim')
-  call sonokai#highlight('DiffText', s:palette.bg0, s:palette.blue)
+  call sonokai#highlight('DiffText', s:palette.none, s:palette.diff_blue)
 else
   call sonokai#highlight('DiffText', s:palette.blue, s:palette.bg0, 'reverse')
 endif
-call sonokai#highlight('Directory', s:palette.green, s:palette.none)
+call sonokai#highlight('Directory', s:palette.fg, s:palette.none)
 call sonokai#highlight('ErrorMsg', s:palette.red, s:palette.none, 'bold,underline')
 call sonokai#highlight('WarningMsg', s:palette.yellow, s:palette.none, 'bold')
 call sonokai#highlight('ModeMsg', s:palette.fg, s:palette.none, 'bold')
@@ -119,7 +119,11 @@ elseif s:configuration.menu_selection_background ==# 'green'
   call sonokai#highlight('PmenuSel', s:palette.bg0, s:palette.bg_green)
 elseif s:configuration.menu_selection_background ==# 'red'
   call sonokai#highlight('PmenuSel', s:palette.bg0, s:palette.bg_red)
+else
+  call sonokai#highlight('PmenuSel', s:palette.none, s:palette.bg4)
 endif
+call sonokai#highlight('LspSigActiveParam', s:palette.none, s:palette.bg0, 'italic')
+
 call sonokai#highlight('PmenuKind', s:palette.green, s:palette.bg2)
 call sonokai#highlight('PmenuExtra', s:palette.grey, s:palette.bg2)
 highlight! link WildMenu PmenuSel
@@ -242,7 +246,7 @@ if has('nvim')
   highlight! link LspInlayHint InlayHints
   highlight! link LspCodeLens VirtualTextInfo
   highlight! link LspCodeLensSeparator VirtualTextHint
-  highlight! link LspSignatureActiveParameter Search
+  highlight! link LspSignatureActiveParameter LspSigActiveParam
   highlight! link TermCursor Cursor
   highlight! link healthError Red
   highlight! link healthSuccess Green
@@ -261,7 +265,7 @@ else
   call sonokai#highlight('Structure', s:palette.blue, s:palette.none)
   call sonokai#highlight('StorageClass', s:palette.blue, s:palette.none)
   call sonokai#highlight('Identifier', s:palette.orange, s:palette.none)
-  call sonokai#highlight('Constant', s:palette.orange, s:palette.none)
+  call sonokai#highlight('Constant', s:palette.green, s:palette.none)
 endif
 call sonokai#highlight('PreProc', s:palette.red, s:palette.none)
 call sonokai#highlight('PreCondit', s:palette.red, s:palette.none)
@@ -285,7 +289,7 @@ call sonokai#highlight('Number', s:palette.purple, s:palette.none)
 call sonokai#highlight('Float', s:palette.purple, s:palette.none)
 call sonokai#highlight('Function', s:palette.green, s:palette.none)
 call sonokai#highlight('Operator', s:palette.red, s:palette.none)
-call sonokai#highlight('Title', s:palette.red, s:palette.none, 'bold')
+call sonokai#highlight('Title', s:palette.green, s:palette.none, 'bold')
 call sonokai#highlight('Tag', s:palette.orange, s:palette.none)
 call sonokai#highlight('Delimiter', s:palette.fg, s:palette.none)
 call sonokai#highlight('Todo', s:palette.bg0, s:palette.blue, 'bold')
@@ -1165,12 +1169,12 @@ highlight! link FzfLuaTitle Title
 highlight! link FzfLuaTitleFlags Yellow
 " }}}
 " folke/snacks.nvim {{{
-highlight! link SnacksDashboardDesc Yellow
+highlight! link SnacksDashboardDesc Orange
 highlight! link SnacksDashboardDir Grey
 highlight! link SnacksDashboardFile Blue
-highlight! link SnacksDashboardHeader Blue
+highlight! link SnacksDashboardHeader Green
 highlight! link SnacksDashboardIcon Blue
-highlight! link SnacksDashboardKey Green
+highlight! link SnacksDashboardKey Purple
 highlight! link SnacksDashboardTitle RedItalic
 highlight! link SnacksPicker Normal
 highlight! link SnacksPickerBorder Grey
@@ -1675,20 +1679,20 @@ if !s:configuration.transparent_background
   call sonokai#highlight('NeoTreeEndOfBuffer', s:palette.bg_dim, s:palette.bg_dim)
   call sonokai#highlight('NeoTreeVertSplit', s:palette.bg0, s:palette.bg0)
 endif
-highlight! link NeoTreeDirectoryIcon Blue
+highlight! link NeoTreeDirectoryIcon Fg
 highlight! link NeoTreeGitAdded Green
-highlight! link NeoTreeGitConflict Yellow
+highlight! link NeoTreeGitConflict Blue
 highlight! link NeoTreeGitDeleted Red
 highlight! link NeoTreeGitIgnored Grey
-highlight! link NeoTreeGitModified Blue
-highlight! link NeoTreeGitUnstaged Purple
-highlight! link NeoTreeGitUntracked Fg
+highlight! link NeoTreeGitModified Yellow
+highlight! link NeoTreeGitUnstaged Yellow
+highlight! link NeoTreeGitUntracked Orange
 highlight! link NeoTreeGitStaged Purple
 highlight! link NeoTreeDimText Grey
 highlight! link NeoTreeIndentMarker NonText
 highlight! link NeoTreeNormalNC NeoTreeNormal
 highlight! link NeoTreeSignColumn NeoTreeNormal
-highlight! link NeoTreeRootName Title
+highlight! link NeoTreeRootName Orange
 " syn_end }}}
 " syn_begin: octo {{{
 " https://github.com/pwntester/octo.nvim
