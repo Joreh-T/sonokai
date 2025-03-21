@@ -98,7 +98,7 @@ if has('nvim')
 else
   call sonokai#highlight('DiffText', s:palette.blue, s:palette.bg0, 'reverse')
 endif
-call sonokai#highlight('Directory', s:palette.green, s:palette.none)
+call sonokai#highlight('Directory', s:palette.fg, s:palette.none)
 call sonokai#highlight('ErrorMsg', s:palette.red, s:palette.none, 'bold,underline')
 call sonokai#highlight('WarningMsg', s:palette.yellow, s:palette.none, 'bold')
 call sonokai#highlight('ModeMsg', s:palette.fg, s:palette.none, 'bold')
@@ -1675,14 +1675,14 @@ if !s:configuration.transparent_background
   call sonokai#highlight('NeoTreeEndOfBuffer', s:palette.bg_dim, s:palette.bg_dim)
   call sonokai#highlight('NeoTreeVertSplit', s:palette.bg0, s:palette.bg0)
 endif
-highlight! link NeoTreeDirectoryIcon Blue
+highlight! link NeoTreeDirectoryIcon Fg
 highlight! link NeoTreeGitAdded Green
-highlight! link NeoTreeGitConflict Yellow
+highlight! link NeoTreeGitConflict Blue
 highlight! link NeoTreeGitDeleted Red
 highlight! link NeoTreeGitIgnored Grey
-highlight! link NeoTreeGitModified Blue
-highlight! link NeoTreeGitUnstaged Purple
-highlight! link NeoTreeGitUntracked Fg
+highlight! link NeoTreeGitModified Yellow
+highlight! link NeoTreeGitUnstaged Yellow
+highlight! link NeoTreeGitUntracked Orange
 highlight! link NeoTreeGitStaged Purple
 highlight! link NeoTreeDimText Grey
 highlight! link NeoTreeIndentMarker NonText
