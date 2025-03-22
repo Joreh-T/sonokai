@@ -261,7 +261,7 @@ else
   call sonokai#highlight('Structure', s:palette.blue, s:palette.none)
   call sonokai#highlight('StorageClass', s:palette.blue, s:palette.none)
   call sonokai#highlight('Identifier', s:palette.orange, s:palette.none)
-  call sonokai#highlight('Constant', s:palette.orange, s:palette.none)
+  call sonokai#highlight('Constant', s:palette.green, s:palette.none)
 endif
 call sonokai#highlight('PreProc', s:palette.red, s:palette.none)
 call sonokai#highlight('PreCondit', s:palette.red, s:palette.none)
@@ -285,7 +285,7 @@ call sonokai#highlight('Number', s:palette.purple, s:palette.none)
 call sonokai#highlight('Float', s:palette.purple, s:palette.none)
 call sonokai#highlight('Function', s:palette.green, s:palette.none)
 call sonokai#highlight('Operator', s:palette.red, s:palette.none)
-call sonokai#highlight('Title', s:palette.red, s:palette.none, 'bold')
+call sonokai#highlight('Title', s:palette.green, s:palette.none, 'bold')
 call sonokai#highlight('Tag', s:palette.orange, s:palette.none)
 call sonokai#highlight('Delimiter', s:palette.fg, s:palette.none)
 call sonokai#highlight('Todo', s:palette.bg0, s:palette.blue, 'bold')
@@ -1688,7 +1688,7 @@ highlight! link NeoTreeDimText Grey
 highlight! link NeoTreeIndentMarker NonText
 highlight! link NeoTreeNormalNC NeoTreeNormal
 highlight! link NeoTreeSignColumn NeoTreeNormal
-highlight! link NeoTreeRootName Title
+highlight! link NeoTreeRootName Orange
 " syn_end }}}
 " syn_begin: octo {{{
 " https://github.com/pwntester/octo.nvim
