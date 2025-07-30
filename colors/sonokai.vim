@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Feb 24 13:02:03 UTC 2025'
+let s:last_modified = '2025年 06月 22日 星期日 06:02:45 UTC'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -767,6 +767,7 @@ highlight! link CocGitChangeRemovedSign PurpleSign
 highlight! link CocGitChangedSign BlueSign
 highlight! link CocGitRemovedSign RedSign
 highlight! link CocGitTopRemovedSign RedSign
+highlight! link CocInlineVirtualText Grey
 " }}}
 " prabirshrestha/vim-lsp {{{
 highlight! link LspErrorVirtualText VirtualTextError
@@ -1230,8 +1231,11 @@ highlight! link RainbowDelimiterViolet Purple
 call sonokai#highlight('BufferCurrent', s:palette.fg, s:palette.bg0)
 call sonokai#highlight('BufferCurrentIndex', s:palette.fg, s:palette.bg0)
 call sonokai#highlight('BufferCurrentMod', s:palette.blue, s:palette.bg0)
-call sonokai#highlight('BufferCurrentSign', s:palette.red, s:palette.bg0)
 call sonokai#highlight('BufferCurrentTarget', s:palette.red, s:palette.bg0, 'bold')
+call sonokai#highlight('BufferCurrentSign', s:palette.red, s:palette.bg0)
+call sonokai#highlight('BufferCurrentADDED', s:palette.green, s:palette.bg0)
+call sonokai#highlight('BufferCurrentDELETED', s:palette.red, s:palette.bg0)
+call sonokai#highlight('BufferCurrentCHANGED', s:palette.blue, s:palette.bg0)
 call sonokai#highlight('BufferVisible', s:palette.fg, s:palette.bg_dim)
 call sonokai#highlight('BufferVisibleIndex', s:palette.fg, s:palette.bg_dim)
 call sonokai#highlight('BufferVisibleMod', s:palette.blue, s:palette.bg_dim)
@@ -1240,9 +1244,13 @@ call sonokai#highlight('BufferVisibleTarget', s:palette.yellow, s:palette.bg_dim
 call sonokai#highlight('BufferInactive', s:palette.grey, s:palette.bg_dim)
 call sonokai#highlight('BufferInactiveIndex', s:palette.grey, s:palette.bg_dim)
 call sonokai#highlight('BufferInactiveMod', s:palette.grey, s:palette.bg_dim)
-call sonokai#highlight('BufferInactiveSign', s:palette.grey_dim, s:palette.bg_dim)
 call sonokai#highlight('BufferInactiveTarget', s:palette.yellow, s:palette.bg_dim, 'bold')
+call sonokai#highlight('BufferInactiveSign', s:palette.grey_dim, s:palette.bg_dim)
+highlight! link BufferInactiveADDED BufferInactiveSign
+highlight! link BufferInactiveDELETED BufferInactiveSign
+highlight! link BufferInactiveCHANGED BufferInactiveSign
 call sonokai#highlight('BufferTabpages', s:palette.grey, s:palette.bg_dim, 'bold')
+call sonokai#highlight('BufferTabpagesSep', s:palette.grey_dim, s:palette.bg_dim, 'bold')
 call sonokai#highlight('BufferTabpageFill', s:palette.bg_dim, s:palette.bg_dim)
 " }}}
 " rcarriga/nvim-notify {{{
