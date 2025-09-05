@@ -162,7 +162,7 @@ if s:configuration.transparent_background == 2
     call sonokai#highlight('WinBarNC', s:palette.grey, s:palette.none)
   endif
 else
-  call sonokai#highlight('StatusLine', s:palette.fg, s:palette.bg3)
+  call sonokai#highlight('StatusLine', s:palette.fg, s:palette.bg1)
   call sonokai#highlight('StatusLineTerm', s:palette.fg, s:palette.bg3)
   call sonokai#highlight('StatusLineNC', s:palette.grey, s:palette.bg1)
   call sonokai#highlight('StatusLineTermNC', s:palette.grey, s:palette.bg1)
