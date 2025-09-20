@@ -289,7 +289,7 @@ call sonokai#highlight('Number', s:palette.purple, s:palette.none)
 call sonokai#highlight('Float', s:palette.purple, s:palette.none)
 call sonokai#highlight('Function', s:palette.green, s:palette.none)
 call sonokai#highlight('Operator', s:palette.red, s:palette.none)
-call sonokai#highlight('Title', s:palette.green, s:palette.none, 'bold')
+call sonokai#highlight('Title', s:palette.grey, s:palette.none, 'bold')
 call sonokai#highlight('Tag', s:palette.orange, s:palette.none)
 call sonokai#highlight('Delimiter', s:palette.fg, s:palette.none)
 call sonokai#highlight('Todo', s:palette.bg0, s:palette.blue, 'bold')
@@ -1166,7 +1166,7 @@ highlight! link TelescopeSelection DiffAdd
 " }}}
 " ibhagwan/fzf-lua {{{
 highlight! link FzfLuaBorder Grey
-highlight! link FzfLuaTitle Title
+highlight! link FzfLuaTitle Green
 highlight! link FzfLuaTitleFlags Yellow
 " }}}
 " folke/snacks.nvim {{{
@@ -1687,6 +1687,12 @@ if !s:configuration.transparent_background
   call sonokai#highlight('NeoTreeEndOfBuffer', s:palette.bg_dim, s:palette.bg_dim)
   call sonokai#highlight('NeoTreeVertSplit', s:palette.bg0, s:palette.bg0)
 endif
+
+call sonokai#highlight('NeoTreeTabInactive', s:palette.grey, s:palette.bg0)
+call sonokai#highlight('NeoTreeTabSeparatorInactive', s:palette.black, s:palette.bg0)
+call sonokai#highlight('NeoTreeTabActive', s:palette.fg, s:palette.bg0)
+call sonokai#highlight('NeoTreeTabSeparatorActive', s:palette.black, s:palette.bg3)
+
 highlight! link NeoTreeDirectoryIcon Fg
 highlight! link NeoTreeGitAdded Green
 highlight! link NeoTreeGitConflict Blue
@@ -1700,7 +1706,7 @@ highlight! link NeoTreeDimText Grey
 highlight! link NeoTreeIndentMarker NonText
 highlight! link NeoTreeNormalNC NeoTreeNormal
 highlight! link NeoTreeSignColumn NeoTreeNormal
-highlight! link NeoTreeRootName Orange
+highlight! link NeoTreeRootName Fg
 " syn_end }}}
 " syn_begin: octo {{{
 " https://github.com/pwntester/octo.nvim
