@@ -33,7 +33,7 @@ return {
     -- z = 
   },
   visual = {
-    a = {bg = palette.bg_red[1], fg = palette.bg0[1], gui = 'bold'},
+    a = {bg = palette.filled_red[1], fg = palette.bg0[1], gui = 'bold'},
     b = {bg = palette.bg4[1], fg = palette.fg[1]},
     c = {bg = palette.bg1[1], fg = palette.grey[1]},
 
@@ -43,7 +43,7 @@ return {
 
   },
   replace = {
-    a = {bg = palette.bg_blue[1], fg = palette.bg0[1], gui = 'bold'},
+    a = {bg = palette.filled_blue[1], fg = palette.bg0[1], gui = 'bold'},
     b = {bg = palette.bg4[1], fg = palette.fg[1]},
     c = {bg = palette.bg1[1], fg = palette.grey[1]},
 
