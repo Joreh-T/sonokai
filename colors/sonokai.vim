@@ -94,7 +94,7 @@ call sonokai#highlight('DiffAdd', s:palette.none, s:palette.bg_green)
 call sonokai#highlight('DiffChange', s:palette.none, s:palette.bg_blue)
 call sonokai#highlight('DiffDelete', s:palette.bg0, s:palette.bg_red)
 if has('nvim')
-  call sonokai#highlight('DiffText', s:palette.none, s:palette.bg_blue)
+  call sonokai#highlight('DiffText', s:palette.bg0, s:palette.blue)
 else
   call sonokai#highlight('DiffText', s:palette.blue, s:palette.bg0, 'reverse')
 endif
